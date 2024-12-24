@@ -71,22 +71,24 @@ npm start
 
 ---
 
-## Components Overview
+# Components Overview with I18n Implementations
 
-# HomePage Component
+## HomePage Component
 
 The `HomePage` component is a React functional component that provides a user interface for a banking application. It includes various features such as viewing account details, depositing money, and toggling between English and Hindi languages using i18next for translations.
 
-## I18next Implementation
+### I18next Implementation
 
 The `HomePage` component uses the `useTranslation` hook from the `react-i18next` library to handle translations. This allows the component to switch between English and Hindi languages.
 
-### Key Points:
+#### Key Points:
 - **useTranslation Hook**: Used to access translation functions and current language.
 - **Language Toggle**: A button to switch between English and Hindi.
 - **Translation Keys**: Used to fetch translated strings from JSON files.
+- **t("application.items.0.alerts.depositMoneyAlert")** is used to fetch a translated string from the JSON translation files
+- **t("application.items.0.alerts.depositMoneyAlert")** will return **"Your deposit was successful!"** if the current language is set to English. If the language is switched to Hindi, it will return the corresponding Hindi translation from the hindi.json file
 
-### Example Usage:
+#### Example Usage:
 ```jsx
 const { t, i18n } = useTranslation(); // to use translation & get data from json file, we have to use useTranslation Hook
 

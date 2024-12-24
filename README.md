@@ -129,3 +129,115 @@ return (
   </div>
 );
 ```
+
+## AccountSummary Component
+
+The `AccountSummary` component is a React functional component that provides a summary of a user's account information. It includes features such as editing account details and viewing recent transactions, with support for multilingual translations using i18next.
+
+### I18next Implementation
+
+The `AccountSummary` component uses the `useTranslation` hook from the `react-i18next` library to handle translations. This allows the component to display content in multiple languages.
+
+#### Key Points:
+- **useTranslation Hook**: Used to access translation functions and current language.
+- **Translation Keys**: Used to fetch translated strings from JSON files.
+- **t("application.items.0.titles.accountSummaryTitle")** is used to fetch a translated string from the JSON translation files.
+- **t("application.items.0.titles.accountSummaryTitle")** will return **"Account Summary"** if the current language is set to English. If the language is switched to Hindi, it will return the corresponding Hindi translation from the `hindi.json` file.
+- **accountsummary** condition written because if the values are getting from prop then it will reflect else the default value from JSON file will reflect to the screen
+
+#### Example Usage:
+```jsx
+const { t } = useTranslation(); // to use translation & get data from json file, we have to use useTranslation Hook
+
+return (
+  <div>
+    <section className="account-summary">
+      <h3 className="highlight-title">
+        {accountSummaryTitle === ""
+          ? t("application.items.0.titles.accountSummaryTitle")
+          : accountSummaryTitle}
+      </h3>
+      <p>
+        {description === ""
+          ? t("application.items.0.descriptions.accountSummaryDescription")
+          : description}
+      </p>
+      {/* Additional fields and logic */}
+    </section>
+  </div>
+);
+```
+
+#### keypoint-2:
+- **showRecentTransactions** have passing the prop value to chilg which is getting from the parent component of **AccounSummary** (basically the prop drilling)
+
+#### Example Usage
+```jsx
+{showRecentTransactions && (
+        <RecentTransactions    // click "Show Recent Transaction" button to see how props data works
+          recentTransTitle={recentTransTitle}  // this value get from parent and passing to child (prop drilling)
+          description={t(
+            "application.items.0.descriptions.recentTransactionDescription"
+          )}
+          label={t("commonList.items.0.labels.transIdLabel")}
+          name="transactionId"
+          id="recent-transactions"
+          placeholder={t(
+            "application.items.0.placeholders.enterTranNumberPlaceholder"
+          )}
+        />
+      )}
+```
+
+## RecentTransactions Component
+
+The `RecentTransactions` component is a React functional component that displays recent transactions for a user's account. It includes features such as displaying transaction details and providing options for transferring funds, downloading statements, and updating account settings, with support for multilingual translations using i18next.
+
+### I18next Implementation
+
+The `RecentTransactions` component uses the `useTranslation` hook from the `react-i18next` library to handle translations. This allows the component to display content in multiple languages.
+
+#### Key Points:
+- **useTranslation Hook**: Used to access translation functions and current language.
+- **Translation Keys**: Used to fetch translated strings from JSON files.
+- **t("application.items.0.titles.defaultTitle")** is used to fetch a translated string from the JSON translation files.
+- **t("application.items.0.titles.defaultTitle")** will return **"Recent Transactions"** if the current language is set to English. If the language is switched to Hindi, it will return the corresponding Hindi translation from the `hindi.json` file.
+- **recentTransTitle** this prop value im getting from parent's parent component (by prop drilling) & writing condition if i didn't get this value, the default value reflect to screen from json file
+
+#### Example Usage:
+```jsx
+const { t } = useTranslation(); // to use translation & get data from json file, we have to use useTranslation Hook
+
+return (
+  <div>
+    <section className="recent-transactions" id={id}>
+      <h3 className="highlight-title">
+        {recentTransTitle === "" ? t("application.items.0.titles.defaultTitle") : recentTransTitle}
+      </h3>
+      <p>{description}</p>
+      <div className="field">
+        <label htmlFor="accountNumber">{t("commonList.items.0.labels.accountNumberLabel")}</label>
+        <div className="field-row">
+          <span className="field-row text-center-use">1234567890</span>
+        </div>
+      </div>
+      <div className="field">
+        <label htmlFor={id}>{label}</label>
+        <input type="text" name={name} id={id} placeholder={placeholder === "" ? t("application.items.0.placeholders.defaultPlaceholder") : placeholder} />
+      </div>
+    </section>
+
+    <section className="account-options">
+      <button onClick={() => alert("Transferring funds...")}>
+        {t("application.items.0.buttons.transferFundButton")}
+      </button>
+      <button onClick={() => alert("Downloading statement...")}>
+        {t("application.items.0.buttons.downloadStatementButton")}
+      </button>
+      <button onClick={() => alert("Updating account settings...")}>
+        {t("application.items.0.buttons.updateAccountSettingButton")}
+      </button>
+    </section>
+  </div>
+);
+```

@@ -97,6 +97,7 @@ const handleLanguageToggle = () => {
   i18n.changeLanguage(newLanguage);
   setIsEnglish(!isEnglish);
 };
+```
 
 ## AccountDetails Component
 
@@ -127,3 +128,4 @@ return (
     />
   </div>
 );
+```

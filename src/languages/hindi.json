@@ -1,0 +1,61 @@
+{
+    "commonList": {
+      "items": [
+        {
+          "Headers": {
+            "bankName": "रूस का केंद्रीय बैंक"
+          },
+          "labels": {
+            "accountNumberLabel": "खाता नंबर",
+            "nameLabel": "नाम",
+            "emailLabel": "ईमेल",
+            "phoneNumberLabel": "फ़ोन नंबर",
+            "transIdLabel": "लेनदेन आईडी"
+          }
+        }
+      ]
+    },
+    "application": {
+      "items": [
+        {
+          "titles": {
+            "recentTransactionTitle": "हाल के लेनदेन",
+            "accountDetailsTitle": "खाता विवरण",
+            "accountSummaryTitle": "खाता सारांश",
+            "defaultTitle": "यह डिफ़ॉल्ट शीर्षक है"
+          },
+          "descriptions": {
+            "recentTransactionDescription": "यहां आपके हाल के लेनदेन हैं।",
+            "accountSummaryDescription": "यहां आपके खाते का सारांश है।"
+          },
+          "literals": {
+            "welcomeLiteral": "रूस के केंद्रीय बैंक में आपका स्वागत है",
+            "copyrightLiteral": "2024 रूस का केंद्रीय बैंक। सर्वाधिकार सुरक्षित।"
+          },
+          "messages": {
+            "copyrightsMessage": "2024 आपका बैंक। सर्वाधिकार सुरक्षित।"
+          },
+          "placeholders": {
+            "enterAccountNumberPlaceholder": "अपना खाता नंबर दर्ज करें",
+            "enterNamePlaceholder": "अपना नाम दर्ज करें",
+            "enterEmailPlaceholder": "अपना ईमेल दर्ज करें",
+            "enterPhoneNumberPlaceholder": "अपना फ़ोन नंबर दर्ज करें",
+            "enterTranNumberPlaceholder": "विवरण प्राप्त करने के लिए लेनदेन आईडी दर्ज करें...",
+            "defaultPlaceholder": "मान दर्ज करें"
+          },
+          "buttons": {
+            "editButton": "संपादित करें",
+            "hideTransactionButton": "हाल के लेनदेन छिपाएं",
+            "showTransactionButton": "हाल के लेनदेन दिखाएं",
+            "transferFundButton": "धन हस्तांतरित करें",
+            "downloadStatementButton": "विवरण डाउनलोड करें",
+            "updateAccountSettingButton": "खाता सेटिंग अपडेट करें"
+          },
+          "alerts": {
+            "depositMoneyAlert": "पैसे जमा हो रहे हैं..."
+          }
+        }
+      ]
+    }
+  }
+  

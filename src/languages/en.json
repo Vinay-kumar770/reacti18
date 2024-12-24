@@ -1,0 +1,65 @@
+{
+    "commonList": {
+      "items": [
+        {
+          "Headers": {
+            "bankName": "Central Bank of Russia"
+          },
+  
+          "labels": {
+            "accountNumberLabel": "Account Number",
+            "nameLabel": "Name",
+            "emailLabel": "Email",
+            "phoneNumberLabel": "Phone Number",
+            "transIdLabel" : "Transaction ID"
+          }
+        }
+      ]
+    },
+  
+    "application": {
+      "items": [
+        {
+          "titles": {
+            "recentTransactionTitle": "Recent Transactions",
+            "accountDetailsTitle" : "Account Details",
+            "accountSummaryTitle" : "Account Summary",
+            "defaultTitle" : "This is default title"
+          },
+          "descriptions": {
+              "recentTransactionDescription" : "Here are your recent transactions.",
+              "accountSummaryDescription" : "Here is a summary of your account."
+          },
+          "literals": {
+            "welcomeLiteral": "Welcome to Central Bank of Russia",
+            "copyrightLiteral": "2024 Central Bank of Russia. All rights reserved."
+          },
+  
+          "messages": {
+            "copyrightsMessage": "2024 Your Bank. All rights reserved."
+          },
+  
+          "placeholders": {
+            "enterAccountNumberPlaceholder": "Enter your account number",
+            "enterNamePlaceholder": "Enter your name",
+            "enterEmailPlaceholder": "Enter your email",
+            "enterPhoneNumberPlaceholder": "Enter your phone number",
+            "enterTranNumberPlaceholder" : "Enter transaction ID to get details...",
+            "defaultPlaceholder" : "Enter Value"
+          },
+  
+          "buttons": {
+            "editButton": "Edit",
+            "hideTransactionButton": "Hide Recent Transactions",
+            "showTransactionButton": "Show Recent Transactions",
+            "transferFundButton" : "Transfer Funds",
+            "downloadStatementButton" : "Download Statement",
+            "updateAccountSettingButton" : "Update Account Settings"
+          },
+          "alerts" : {
+              "depositMoneyAlert" : "Depositing money..."
+          }
+        }
+      ]
+    }
+  }

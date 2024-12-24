@@ -1,4 +1,4 @@
-# React Components with Jest Testing
+# React Components with Jest I18n Implementation
 
 This repository contains **React components** implemented with **TypeScript**, along with their corresponding **I18next Implementation**. These components demonstrate the proper usage of i18next to get values from seperate json files according to language change
 
@@ -97,3 +97,33 @@ const handleLanguageToggle = () => {
   i18n.changeLanguage(newLanguage);
   setIsEnglish(!isEnglish);
 };
+
+## AccountDetails Component
+
+The `AccountDetails` component is a React functional component that provides detailed information about a user's account. It includes features such as displaying account summaries and recent transactions, with support for multilingual translations using i18next.
+
+### I18next Implementation
+
+The `AccountDetails` component uses the `useTranslation` hook from the `react-i18next` library to handle translations. This allows the component to display content in multiple languages.
+
+#### Key Points:
+- **useTranslation Hook**: Used to access translation functions and current language.
+- **Translation Keys**: Used to fetch translated strings from JSON files.
+- **t("application.items.0.titles.accountDetailsTitle")** is used to fetch a translated string from the JSON translation files.
+- **t("application.items.0.titles.accountDetailsTitle")** will return **"Account Details"** if the current language is set to English. If the language is switched to Hindi, it will return the corresponding Hindi translation from the `hindi.json` file.
+
+#### Example Usage:
+```jsx
+const { t } = useTranslation(); // to use translation & get data from json file, we have to use useTranslation Hook
+
+return (
+  <div className="account-details-container">
+    <h2>{t("application.items.0.titles.accountDetailsTitle")}</h2>
+
+    <AccountSummary
+      accountSummaryTitle="Passing title Account Summary"   // if you're not sending this prop data, default value will reflect from en.json
+      recentTransTitle="Recent Transactions"  // This value goes as prop drilling... flow: AccountDetails --> AccountSummary --> RecentTransactions Component. If this value isn't passed, the default value set as Title for RecentTransaction
+      description={t("application.items.0.descriptions.accountSummaryDescription")}
+    />
+  </div>
+);

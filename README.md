@@ -4,6 +4,31 @@ This repository contains **React components** implemented with **TypeScript**, a
 
 ---
 
+# i18n Configuration
+
+This configuration file sets up internationalization for the application using `i18next` and `react-i18next`.
+
+## Setup
+
+1. **Import Dependencies**:
+   - `i18next` for core functionality.
+   - `initReactI18next` to integrate with React.
+   - Language JSON files for translations.
+
+2. **Resource Object**:
+   - Contains translation data for each language.
+   - Example: English (`en`) and Hindi (`hindi`).
+
+3. **Initialization**:
+   - `use(initReactI18next)`: Integrates i18next with React.
+   - `init` method:
+     - `resources`: Translation data.
+     - `lng`: Default language (English).
+     - `fallbackLng`: Fallback language if translation is missing.
+     - `interpolation.escapeValue`: Prevents XSS attacks.
+
+---
+
 ## Components Overview
 
 This project includes the following components:
@@ -51,48 +76,6 @@ npm start
 # HomePage Component
 
 The `HomePage` component is a React functional component that provides a user interface for a banking application. It includes various features such as viewing account details, depositing money, and toggling between English and Hindi languages using i18next for translations.
-
-## Features
-
-### 1. **Account Details**
-- **Description**: Stay updated with your finances by checking your current account status anytime.
-- **Button Text**: Check Details
-- **Function**: `handleViewBalance`
-
-### 2. **Deposit**
-- **Description**: Easily deposit money into your account with just a few clicks.
-- **Button Text**: Deposit
-- **Function**: `handleDeposit`
-
-### 3. **Term Deposits**
-- **Description**: Invest in term deposits and enjoy higher returns on your savings.
-- **Button Text**: View Term Deposits
-- **Function**: `handleViewTermDeposits`
-
-### 4. **Services**
-- **Description**: Discover a wide range of banking services tailored to your needs.
-- **Button Text**: View Services
-- **Function**: `handleViewServices`
-
-### 5. **Tax Benefits**
-- **Description**: Maximize your savings with tax benefits on your investments.
-- **Button Text**: View Tax Benefits
-- **Function**: `handleViewTaxBenefits`
-
-### 6. **Loans**
-- **Description**: Apply for personal and home loans with competitive interest rates.
-- **Button Text**: View Loans
-- **Function**: `handleViewLoans`
-
-### 7. **Credit Cards**
-- **Description**: Manage your credit cards and enjoy exclusive rewards and benefits.
-- **Button Text**: View Credit Cards
-- **Function**: `handleViewCreditCards`
-
-### 8. **Support**
-- **Description**: Reach out to our support team for any assistance you need.
-- **Button Text**: Get Support
-- **Function**: `handleGetSupport`
 
 ## I18next Implementation
 

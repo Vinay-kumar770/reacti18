@@ -169,7 +169,7 @@ return (
 ```
 
 #### keypoint-2:
-- **showRecentTransactions** have passing the prop value to chilg which is getting from the parent component of **AccounSummary** (basically the prop drilling)
+- **showRecentTransactions** have passing the prop value to child which is getting from the parent component of **AccounSummary** (basically the prop drilling)
 
 #### Example Usage
 ```jsx
@@ -241,3 +241,62 @@ return (
   </div>
 );
 ```
+
+## i18n JSON Structure
+
+This JSON file is used for internationalization (i18n) to provide multilingual support for the application. The file is divided into two main sections: `commonList` and `application`.
+
+### Sections Overview
+
+#### 1. **commonList**
+The `commonList` section contains values that are common to multiple microfrontends. This ensures consistency across different parts of the application.
+
+##### Structure:
+- **items**: An array of objects containing common elements.
+  - **Headers**: Contains common header values.
+    - `bankName`: The name of the bank.
+  - **labels**: Contains common label values.
+    - `accountNumberLabel`: Label for account number.
+    - `nameLabel`: Label for name.
+    - `emailLabel`: Label for email.
+    - `phoneNumberLabel`: Label for phone number.
+    - `transIdLabel`: Label for transaction ID.
+
+#### 2. **application**
+The `application` section contains values that are specific to this particular microfrontend. This includes strings for alerts, HTML tag contents, button texts, error messages, and other user-visible elements that need to be translated.
+
+##### Structure:
+- **items**: An array of objects containing application-specific elements.
+  - **titles**: Contains titles used in the application.
+    - `recentTransactionTitle`: Title for recent transactions.
+    - `accountDetailsTitle`: Title for account details.
+    - `accountSummaryTitle`: Title for account summary.
+    - `defaultTitle`: Default title.
+  - **descriptions**: Contains descriptions used in the application.
+    - `recentTransactionDescription`: Description for recent transactions.
+    - `accountSummaryDescription`: Description for account summary.
+  - **literals**: Contains literal strings used in the application.
+    - `welcomeLiteral`: Welcome message.
+    - `copyrightLiteral`: Copyright message.
+  - **messages**: Contains messages used in the application.
+    - `copyrightsMessage`: Copyright message.
+  - **placeholders**: Contains placeholder texts used in the application.
+    - `enterAccountNumberPlaceholder`: Placeholder for account number input.
+    - `enterNamePlaceholder`: Placeholder for name input.
+    - `enterEmailPlaceholder`: Placeholder for email input.
+    - `enterPhoneNumberPlaceholder`: Placeholder for phone number input.
+    - `enterTranNumberPlaceholder`: Placeholder for transaction ID input.
+    - `defaultPlaceholder`: Default placeholder.
+  - **buttons**: Contains button texts used in the application.
+    - `editButton`: Text for edit button.
+    - `hideTransactionButton`: Text for hide transactions button.
+    - `showTransactionButton`: Text for show transactions button.
+    - `transferFundButton`: Text for transfer funds button.
+    - `downloadStatementButton`: Text for download statement button.
+    - `updateAccountSettingButton`: Text for update account settings button.
+  - **alerts**: Contains alert messages used in the application.
+    - `depositMoneyAlert`: Alert message for depositing money.
+
+### Conclusion
+
+This JSON structure ensures that all user-visible strings in the application can be easily translated, providing a seamless multilingual experience. The `commonList` section maintains consistency across multiple microfrontends, while the `application` section caters to specific needs of this microfrontend.
